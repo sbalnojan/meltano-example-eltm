@@ -1,0 +1,15 @@
+source:
+  type: s3
+  config:
+    path_specs:
+      -
+        include: "s3://test/*.csv"
+
+    aws_config:
+      aws_access_key_id: s
+      aws_secret_access_key: s
+      aws_region: us-east-1
+      aws_endpoint_url: http://host.docker.internal:5005
+    env: "PROD"
+    profiling:
+      enabled: false

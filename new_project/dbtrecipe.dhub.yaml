@@ -1,0 +1,16 @@
+source:
+  type: "dbt"
+  config:
+    # Coordinates
+    manifest_path: ${MELTANO_PROJECT_ROOT}/.meltano/transformers/dbt/target/manifest.json
+    catalog_path: ${MELTANO_PROJECT_ROOT}/.meltano/transformers/dbt/target/catalog.json
+    sources_path: ${MELTANO_PROJECT_ROOT}/.meltano/transformers/dbt/target/sources.json
+
+    # TODO: Change me to the appropriate platform, ie. bigquery, postgres, etc.
+    # https://github.com/datahub-project/datahub/blob/master/metadata-service/war/src/main/resources/boot/data_platforms.json
+    target_platform: "postgres"
+#sink:
+#  type: datahub-rest
+#  config:
+#    server: ${DATAHUB_GMS_HOST}
+#    token: ${DATAHUB_GMS_TOKEN}

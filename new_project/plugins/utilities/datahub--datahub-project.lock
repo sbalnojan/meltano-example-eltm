@@ -1,0 +1,39 @@
+{
+  "plugin_type": "utilities",
+  "name": "datahub",
+  "namespace": "datahub",
+  "variant": "datahub-project",
+  "label": "Datahub",
+  "docs": "https://hub.meltano.com/utilities/datahub",
+  "repo": "https://github.com/datahub-project/datahub",
+  "pip_url": "acryl-datahub[rest,dbt]",
+  "executable": "datahub",
+  "settings": [
+    {
+      "name": "gms_host",
+      "kind": "string",
+      "label": "GMS Host",
+      "description": "URL of DataHub GMS endpoint. Typically this is something like `your-server:8000` where `your-server` is the server IP or domain name. If using metadata service authentication enabled in the image env (recommended), then this should instead point to your frontend which acts as a proxy for the GMS service. `datahub.yourdomain.com/api/gms`"
+    },
+    {
+      "name": "gms_token",
+      "kind": "password",
+      "label": "GMS Token",
+      "description": "Bearer token used for authentication. AKA Personal Access Token. Not needed if contacting GMS service directly."
+    }
+  ],
+  "commands": {
+    "ingest-dbt": {
+      "args": "ingest run --config ${MELTANO_PROJECT_ROOT}/utilities/datahub/dbt.dhub.yml",
+      "description": "Push dbt metadata to datahub"
+    }
+  },
+  "requires": {
+    "files": [
+      {
+        "name": "files-datahub",
+        "variant": "z3z1ma"
+      }
+    ]
+  }
+}

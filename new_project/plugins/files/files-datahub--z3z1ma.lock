@@ -1,0 +1,10 @@
+{
+  "plugin_type": "files",
+  "name": "files-datahub",
+  "namespace": "files_datahub",
+  "variant": "z3z1ma",
+  "label": "Datahub",
+  "docs": "https://hub.meltano.com/files/files-datahub",
+  "repo": "https://github.com/z3z1ma/files-datahub",
+  "pip_url": "git+https://github.com/z3z1ma/files-datahub.git"
+}

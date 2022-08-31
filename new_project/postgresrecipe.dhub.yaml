@@ -1,0 +1,13 @@
+source:
+  type: postgres
+  config:
+    # Coordinates
+    host_port: host.docker.internal:5432
+    database: demo
+
+    # Credentials
+    username: admin
+    password: password
+
+    # Options
+  #  database_alias: DatabaseNameToBeIngested
