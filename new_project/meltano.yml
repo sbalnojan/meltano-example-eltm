@@ -61,6 +61,6 @@ plugins:
   utilities:
   - name: datahub
     variant: datahub-project
-    pip_url: acryl-datahub[s3,postgres,dbt,superset]
+    pip_url: acryl-datahub[s3,postgres,dbt]
     config:
       gms_host: http://host.docker.internal:8080

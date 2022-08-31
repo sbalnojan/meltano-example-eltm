@@ -15,7 +15,7 @@ for the default local versions are preconfigured in the [meltano.yml](new_projec
   utilities:
   - name: datahub
     variant: datahub-project
-    pip_url: acryl-datahub[s3,postgres,dbt,superset]
+    pip_url: acryl-datahub[s3,postgres,dbt]
     config:
       gms_host: http://host.docker.internal:8080
       # gms_auth: Not necessary for the local auth-less version, but likely necessary if you're running in production!
@@ -42,7 +42,7 @@ Batect automatically tears down & cleans up after the task finishes.
 
 2. Launch meltano with batect via ```./batect melt```.
 2.1. Alternatively you can use your local meltano, installed with ```pip install meltano```. (The mocks will still work.)
-
+2.2 Run ```meltano install`` to install DataHub and the three needed plugins (s3, postgres, dbt)
 3. Do a ELT run to fill the PostgreSQL database with raw & modelled data by running ```meltano run tap-s3-csv target-postgres dbt-postgres:run```
 
 4. Next we're going to ingest the metadata. For S3 & PostgreSQL, you can run the recipes right away:
