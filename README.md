@@ -1,4 +1,7 @@
 # Meltano Toy Projects: DataHub & Meltano
+
+![Diagram](diagram.jpg)
+
 This Meltano repository explores how to use DataHub with Meltano. It contains a complete setup of:
 - A local DataHub (using the datahub-cli & docker-compose)
 - An AWS S3 mock + a postgres database
