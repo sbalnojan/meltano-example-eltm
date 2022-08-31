@@ -6,7 +6,7 @@ This Meltano repository explores how to use DataHub with Meltano. It contains a 
 - And of course a meltano project which you could use to build up your own meltano + DataHub project.
 
 ## How to run this project?
-Using this repository is really easy as it most of it runs inside docker via [batect](https://batect.dev/), a light-weight wrapper around docker. 
+Using this repository is really easy as most of it runs inside docker via [batect](https://batect.dev/), a light-weight wrapper around docker. 
 
 But you will need to have either a datahub server already runing somewhere to push the data to, or you use a local version. The connections
 for the default local versions are preconfigured in the [meltano.yml](new_project/meltano.yml). 
@@ -26,7 +26,7 @@ To get started with the local version, [install datahub](https://datahubproject.
 By default, the UI will be located at http://localhost:9002/.
 
 ### Run with batect
-We [batect](https://batect.dev/) because it makes it possible for you to run this project without even installing meltano. [Batect requires Java & Docker to be installed to run](https://batect.dev/docs/getting-started/requirements). 
+[batect](https://batect.dev/) makes it possible for you to run this project without installing meltano. [Batect requires Java & Docker to be installed to run](https://batect.dev/docs/getting-started/requirements). 
 
 The repository has a few configured "batect tasks" which essentially all spin up docker or docker-compose for you and do things inside these containers.
 
